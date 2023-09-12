@@ -1,0 +1,123 @@
+<Pokemon>:
+    Image:
+        source: "pokemonunite6.jpg"
+        size: root.size
+        allow_stretch : True
+        keep_ratio: False
+    #Label:
+        #text: "Pokemon Unite Builder"
+        #font_size: "35dp"
+        #color: 1, 0, 0, 1
+        #pos:500,800
+
+    ToggleButton:
+        text: "Aegislash"
+        on_state: root.aegislash(self)
+        size_hint: None, 1
+        width: "90dp"
+        height: "50"
+        pos: 50,300
+        font_size: 20
+
+    ToggleButton:
+        text: "Azumaril"
+        on_state: root.azumarill(self)
+        size_hint: None, 1
+        width: "90dp"
+        height: "50"
+        pos: 50,370
+        font_size: 20
+
+    ToggleButton:
+        text: "Aeos Cookie"
+        on_state: root.aeosCookie(self)
+        size_hint: None, 1
+        width: "125dp"
+        height: "50"
+        pos: 450,450
+        font_size: 20
+
+    ToggleButton:
+        text: "Assault Vest"
+        on_state: root.assaultVest(self)
+        size_hint: None, 1
+        width: "125dp"
+        height: "50"
+        pos: 450,400
+        font_size: 20
+
+    ToggleButton:
+        text: "Attack Weight"
+        on_state: root.attackWeight(self)
+        size_hint: None, 1
+        width: "125dp"
+        height: "50"
+        pos: 450,350
+        font_size: 20
+
+    Slider:
+        id: nivelObjeto
+        min: 1
+        max: 30
+        value: 1
+        orientation: "horizontal"
+        on_value: root.nivelObjeto(self)
+        pos: 450,220
+        width: "200dp"
+    Label:
+        text: "Nivel Objeto: " + root.nivelObjetoValor
+        pos: 470,250
+        color: 255,255,255
+        font_size: 20
+        bold: True
+        background_color: (1,0,1,1)
+
+    Slider:
+        id: nivelStackObjeto
+        min: 1
+        max: 6
+        value: 1
+        orientation: "horizontal"
+        on_value: root.nivelObjetoStack(self)
+        pos: 450,120
+        width: "100dp"
+    Label:
+        text: "Nivel Stack: " + root.nivelObjetoStackValor
+        pos: 470,150
+        color: 255,255,255
+        font_size: 20
+        bold: True
+
+    Slider:
+        id: nivelPokemon
+        min: 1
+        max: 15
+        value: 1
+        orientation: "horizontal"
+        on_value: root.nivelPokemon(self)
+        pos: 50,170
+        width: "150dp"
+    Label:
+        text: "Nivel Pokemon: " + root.nivelPokemonValor
+        pos: 80,200
+        color: 255,255,255
+        font_size: 20
+        bold: True
+
+
+    Button:
+        text: "Ver Resultados"
+        pos: 300,50
+        width: "200dp"
+        height: "80"
+        on_press: root.on_button_click()
+        font_size: 25
+
+
+    #TextInput:
+        #text: root.results
+        #pos: 600,100
+        #width: "500dp"
+        #color: 255,255,255
+
+
